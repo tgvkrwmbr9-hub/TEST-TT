@@ -1,0 +1,9 @@
+[Unit]
+Description=STYCH TYNY - sauvegarde
+
+[Service]
+Type=oneshot
+User=stych
+WorkingDirectory=/opt/stych_tyny
+ExecStart=/opt/stych_tyny/venv/bin/python backup.py
+ReadWritePaths=/opt/stych_tyny/data

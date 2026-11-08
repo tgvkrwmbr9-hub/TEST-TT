@@ -1,0 +1,18 @@
+[Unit]
+Description=STYCH TYNY - bot Telegram
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=stych
+WorkingDirectory=/opt/stych_tyny
+ExecStart=/opt/stych_tyny/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/stych_tyny/data
+
+[Install]
+WantedBy=multi-user.target
